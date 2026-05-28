@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# Alfred runtime (Configure Workflow 写入)
+workflow/prefs.plist
+
+# 本地索引缓存（若写入工作流目录）
+notes_index.json

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.xiushanfan.alfred-open-obsidian</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>1D97CA8C-04E9-4D1F-A77F-5A16469E8827</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2FA2E58F-8F4C-41C7-AF62-B3E8437E51F3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceuid</key>
+				<string>1D97CA8C-04E9-4D1F-A77F-5A16469E8827</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string>Search and open notes in your Obsidian vault</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Open Obsidian</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>obs</string>
+				<key>queuedelaycustom</key>
+				<integer>0</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>正在搜索笔记…</string>
+				<key>script</key>
+				<string>export PYTHONUTF8=1; /usr/bin/python3 "./search.py" "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>obs 后加空格，再输入关键词，如 wechat</string>
+				<key>title</key>
+				<string>Open Obsidian</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>1D97CA8C-04E9-4D1F-A77F-5A16469E8827</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>export PYTHONUTF8=1; /usr/bin/python3 "./open_note.py" "{query}"</string>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2FA2E58F-8F4C-41C7-AF62-B3E8437E51F3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>在 Alfred 中输入 obs + 空格 + 关键词，搜索并打开 Obsidian 笔记。
+
+首次使用请在左侧配置 Obsidian 库路径（文档库根目录的绝对路径）。</string>
+	<key>uidata</key>
+	<dict>
+		<key>1D97CA8C-04E9-4D1F-A77F-5A16469E8827</key>
+		<dict>
+			<key>note</key>
+			<string></string>
+			<key>xpos</key>
+			<integer>150</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>2FA2E58F-8F4C-41C7-AF62-B3E8437E51F3</key>
+		<dict>
+			<key>note</key>
+			<string></string>
+			<key>xpos</key>
+			<integer>450</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>/Users/you/Documents/MyVault</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>要搜索的 Obsidian 文档库根目录绝对路径。可在 Obsidian 中右键库名 →「在 Finder 中显示」获取。</string>
+			<key>label</key>
+			<string>Obsidian 库路径</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>vault_path</string>
+		</dict>
+	</array>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string></string>
+	<key>workflow_type</key>
+	<string>default</string>
+</dict>
+</plist>
