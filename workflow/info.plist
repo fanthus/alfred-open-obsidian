@@ -25,7 +25,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>fanthus</string>
 	<key>description</key>
 	<string>Search and open notes in your Obsidian vault</string>
 	<key>disabled</key>
@@ -106,9 +106,9 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>在 Alfred 中输入 obs + 空格 + 关键词，搜索并打开 Obsidian 笔记。
+	<string>Search notes in an Obsidian vault and open the selected note in Obsidian via the obs keyword.
 
-首次使用请在左侧配置 Obsidian 库路径（文档库根目录的绝对路径）。</string>
+Set Obsidian 库路径 in the Workflow Configuration to the absolute path of the vault root.</string>
 	<key>uidata</key>
 	<dict>
 		<key>1D97CA8C-04E9-4D1F-A77F-5A16469E8827</key>
@@ -159,7 +159,7 @@
 	<key>version</key>
 	<string>1.0.0</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/fanthus/alfred-open-obsidian</string>
 	<key>workflow_type</key>
 	<string>default</string>
 </dict>
